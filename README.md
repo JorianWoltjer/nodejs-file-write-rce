@@ -38,6 +38,7 @@ nc -lnvp 1337
 
 ```sh
 cd exploit/
+python3 -m pip install -r requirements.txt
 python3 main.py
 ```
 
