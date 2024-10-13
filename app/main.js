@@ -9,7 +9,7 @@ app.use(bodyParser.json())
 
 app.post('/upload', (req, res) => {
     const { filename, content } = req.body;
-    console.log(filename, content)
+    console.log({ filename, content })
     fs.writeFile(filename, content, () => {
         res.json({ message: 'File uploaded!' });
     });
